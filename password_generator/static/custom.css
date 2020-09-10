@@ -1,5 +1,5 @@
 #footer {
-  position: relative;;
+  position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -7,6 +7,15 @@
   text-align: center;
 }
 
+
+#content-wrap {
+  padding-bottom: 2rem;
+}
+
+#page-container {
+  position: relative;
+  min-height: 90vh;
+}
 
 #intro{
 
