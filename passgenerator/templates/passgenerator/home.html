@@ -1,58 +1,37 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-
-<head>
-  <meta charset="utf-8">
-  <title>Home</title>
-
-</head>
-
-<body>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-      <a class="navbar-brand" href="{% url 'home' %}">password_generator & word_counter</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <div class="navbar-nav ml-auto">
-
-          <a class="nav-link" href="{% url 'home' %}">Home</a>
-          <a class="nav-link" href="{% url 'takepass' %}">Password_Generator</a>
-          <a class="nav-link" href="{% url 'takecount' %}">Word_Counter</a>
-
-        </div>
-      </div>
-  </nav>
-
-  <div class="container jumbotron text-center">
+{% extends 'passgenerator/base.html' %}
+{% block content %}
+<br>
+<h3>
+  <p id="intro">Passwords are a real security threat. Over 80% of hacking-related breaches are due to weak or stolen passwords, a recent report shows . So if you want to safeguard your personal info and assets, creating secure passwords is a big first step. And
+    that’s where the this Password Generator can help. Impossible-to-crack passwords are complex with multiple types of characters (numbers, letters, and symbols). </p>
+</h3>
 
 <h3>
-<p>Passwords are a real security threat. Over 80% of hacking-related breaches are due to weak or stolen passwords, a recent report shows . So if you want to safeguard your personal info and assets, creating secure passwords is a big first step. And that’s where the this Password Generator can help. Impossible-to-crack passwords are complex with multiple types of characters (numbers, letters, and symbols). </p></h3>
+  <p id="intro">Making your passwords different for each website or app also helps defend against hacking.</p>
+</h3>
 
-<h3>
-<p>Making your passwords different for each website or app also helps defend against hacking.</p></h3>
+<div class="text-center">
+<h3 id="introclick"><a class="text-center" href="{% url 'takepass' %}">Click here to Generate Unique Passwords</a></h3>
 
 
-<h3><a class="text-center" href="{% url 'takepass' %}">click here to generate unique passwords</a></h3>
+</div>
 
+<hr>
 <br>
 
 <h3>
-<p>Word count is an important metric for writing, especially in publishing, advertising, academia, and legal proceedings. By using this tool, you will be able to determine how many words there are in your text. You can then check to see if there are enough number of words or it has exceeded a certain limit. </p></h3>
+  <p id="intro">Word count is an important metric for writing, especially in publishing, advertising, academia, and legal proceedings. By using this tool, you will be able to determine how many words there are in your text. You can then check to see if there
+    are enough number of words or it has exceeded a certain limit. </p>
+</h3>
 
 <br>
+<div class="text-center">
+<h3 id="introclick" ><a class="text-center" href="{% url 'takecount' %}">Click here to Count the Words</a></h3>
 
-<h3><a class="text-center" href="{% url 'takecount' %}">click here to count the words</a></h3>
 
 
-</body>
+</div>
 
-</html>
+<br>
+<br>
+{% endblock %}
