@@ -1,19 +1,19 @@
 {% extends 'passgenerator/base.html' %}
 
 {% block content %}
+<br>
 
-
-<h2 class="text-center">There are {{count}} Words in your Text!</h2>
+<h2 id="introcount" class="text-center">There are {{count}} Words in your Text!</h2>
 <hr>
-<h2>Individual Word Counts:</h2>
-
+<u><h3 id="intro" >Individual Word Counts: </h3> </u>
+<br>
 
 {% for word , totalcount in sortedworddict %}
 
-<h3>{{word}}:{{totalcount}} </h3>
+<h4 id="intro" >{{word}}:{{totalcount}} </h4>
 {% endfor %}
-
+<hr>
 <br>
-<h4 id="intro" >Your Text:{{ fulltext }}</h4>
+<h5 id="intro" >Your Text:-{{ fulltext }}</h5>
 
 {% endblock %}

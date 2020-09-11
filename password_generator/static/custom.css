@@ -30,6 +30,14 @@
 }
 
 
+#introcount
+{
+    font-family: 'Nanum Myeongjo', serif;
+    font-style: italic;
+
+}
+
+
 .topnav
 {
   color: white;
@@ -38,7 +46,7 @@
 
 
 .button {
-  background-color: #4CAF50; /* Green */
+  background-color: #589EFE;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -58,5 +66,12 @@
 
 
 .navbar-custom {
-    background-color: #81c984;
+    background-color: #3D8EFE;
+}
+
+
+#displaypass
+{
+    background-color: #74AEFE;
+
 }
